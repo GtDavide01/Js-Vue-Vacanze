@@ -20,14 +20,15 @@ header{
     width: 70%;
     margin: 0 auto;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .cardsong{
     padding: 10px;
     margin: 20px;
     border: 1px solid black;
-    width: calc( 100% / 3 );
     background-color: #c2c2c2;
-    
+    width: 15%;
 }
 .name-song{
     font-weight: 600;
@@ -79,5 +80,25 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.insertsong{
+   display: flex;
+   flex-direction: column;
+}
+.insertsong label{
+  font-size: 2rem;
+}
+.insertsong input{
+    font-size: 2rem;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.insertsong button{
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1.5rem;
+    border-radius: 10px ;
+    border:  1px solid black;
+    cursor: pointer;
 }
 

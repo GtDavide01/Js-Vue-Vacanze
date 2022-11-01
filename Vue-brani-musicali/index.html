@@ -33,6 +33,20 @@
                     </div>
                 </div>
             </div>
+            <div class="containermain">
+                <div class="insertsong">
+                    <label for="canzone">Canzone</label>
+                    <input type="text" id="canzone" v-model="insertName">
+                    <label for="cantante">Cantante</label>
+                    <input type="text" id="cantante" v-model="insertAutor">
+                    <label for="genere">Genere</label>
+                    <input type="text" id="genere" v-model="insertGenere">
+                    <label for="durata">Durata</label>
+                    <input type="text" id="durata" v-model="insertDurata">
+                    <button @click="insertSong">Inserisci nuova canzone</button>
+                </div>
+            </div>
+           
         </main>
         <!-- FOOTER -->
         <footer>

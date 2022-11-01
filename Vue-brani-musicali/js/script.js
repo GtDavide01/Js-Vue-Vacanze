@@ -38,7 +38,7 @@ createApp({
                     nome: "Sharks", 
                     cantante: "Image Dragons",
                     genere: "Rock",
-                    durata: 3.10,
+                    durata: 3.11,
                     done: false,
                 },
                 {
@@ -56,11 +56,24 @@ createApp({
                     done: false,
                 },
             ],
+            insertAutor: "",
+            insertDurata:"",
+            insertGenere:"",
+            insertName:"",
         }
     },
     methods : {
         changeDone: function(index){
             this.playlist[index].done = !this.playlist[index].done;
+        },
+        insertSong: function(){
+            this.playlist.push({
+                nome: this.insertName , 
+                cantante: this.insertAutor,
+                genere: this.insertGenere ,
+                durata: this.insertDurata,
+                done: false,
+            })
         }
     }
 }).mount("#app");
