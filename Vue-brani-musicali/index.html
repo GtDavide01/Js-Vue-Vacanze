@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Brani Musicali </title>
+    <!-- Vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="app">
+        <!-- HEADER -->
+        <header>
+            <h1>Vue Playlist</h1>
+        </header>
+        <!-- MAIN -->
+        <main>
+            <div class="containermain">
+                <div v-for="(valore , indice) in playlist" class="cardsong" @click="changeDone(indice)">
+                    <div class="info">
+                        <p class="name-song">- {{valore.nome}}</p>
+                        <p class="cantante-song">- {{valore.cantante}}</p>
+                        <p class="genere-song">- {{valore.genere}}</p>
+                        <p class="durata-song">- {{valore.durata}}</p>
+                        <div class="button-play " v-bind:class = "valore.done === false ? 'none' : 'actvie'">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- FOOTER -->
+        <footer>
+
+        </footer>
+    </div>
+    
+
+    <script src="js/script.js"></script>
+</body>
+</html>
